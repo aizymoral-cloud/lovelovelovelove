@@ -1,0 +1,46 @@
+// --- Password Logic ---
+function checkPassword() {
+    // The required password is 1821 (Your birthdate combination)
+    const correctPassword = "1821"; 
+    const input = document.getElementById('password-input').value;
+    const errorMessage = document.getElementById('error-message');
+    const introScreen = document.getElementById('intro-screen');
+    const mainContent = document.getElementById('main-content');
+
+    if (input === correctPassword) {
+        // Correct Password: Start the smooth reveal sequence
+        errorMessage.textContent = 'Unlocking... Success!';
+        
+        // 1. Fade out the intro screen
+        introScreen.style.opacity = '0'; 
+
+        // 2. Wait 1 second (to match the CSS transition duration)
+        setTimeout(() => {
+            introScreen.style.display = 'none'; // Hide it fully after fading
+
+            // 3. Make the main content visible
+            mainContent.classList.remove('hidden');
+            // 4. Trigger the main content's own fade-in transition
+            mainContent.style.opacity = '1';
+        }, 1000); 
+
+    } else {
+        // Incorrect Password
+        errorMessage.textContent = 'Oops! That key is wrong. Try again!';
+        // Simple shake animation on error
+        errorMessage.style.animation = 'shake 0.5s';
+        setTimeout(() => {
+            errorMessage.style.animation = ''; // Reset the animation
+        }, 500);
+    }
+}
+
+// NOTE: You'll also need to add the shake animation CSS to your style.css 
+// (or inside a <style> tag in your HTML) for the error shake to work:
+/*
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}
+*/

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌 A Secret Message for Juzen 🗝️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="intro-screen">
+        <div class="intro-content">
+            <img src="hello_kitty_icon.png" alt="Hello Kitty Icon" class="hk-icon">
+            <h1>A Little Secret Just For You, Juzen!</h1>
+            <p>To unlock this special message, you'll need the **key**...</p>
+            <p class="clue">Clue: Our birthdate combination!</p> 
+            <input type="password" id="password-input" placeholder="Enter the 4-digit key">
+            <button onclick="checkPassword()">Unlock</button>
+            <p id="error-message" class="error-text"></p>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <header>
+            <div class="header-banner">
+                <img src="lily_plumeria_banner.png" alt="Lily and Plumeria Banner">
+                <h2 class="animate-in">My Dearest Juzen,</h2>
+            </div>
+        </header>
+
+        <section id="music-section" class="content-box fade-in">
+            <h3>🎶 Our Melody: Songs That Tell Our Story 🎶</h3>
+            <p>Click on a song to listen on Spotify and remember the moment!</p>
+            <div class="song-list">
+                <a href="YOUR_SPOTIFY_LINK_1" target="_blank" class="spotify-link">✨ Song Title 1 (e.g., 'Perfect' by Ed Sheeran) ✨</a>
+                <a href="YOUR_SPOTIFY_LINK_2" target="_blank" class="spotify-link">💫 Song Title 2 (e.g., 'At My Worst' by Pink Sweat$) 💫</a>
+                <a href="YOUR_SPOTIFY_LINK_3" target="_blank" class="spotify-link">💖 Song Title 3 (e.g., 'A Thousand Years' by Christina Perry) 💖</a>
+                </div>
+        </section>
+
+        <section id="photo-section" class="content-box slide-in-left">
+            <h3>📸 Moments We Share 📸</h3>
+            <div class="photo-grid">
+                <img src="photo1.jpg" alt="Photo of Us 1" class="gallery-photo">
+                <img src="photo2.jpg" alt="Photo of Us 2" class="gallery-photo">
+                <img src="photo3.jpg" alt="Photo of Us 3" class="gallery-photo">
+                </div>
+        </section>
+
+        <section id="letter-section" class="content-box slide-in-right">
+            <h3>💌 My Heart on Paper: A Letter for You 💌</h3>
+            <div class="letter-box">
+                <p>My love, I wrote this for you because...</p>
+                <p>Juzen, you make my heart feel like it's covered in pink lilies and sunshine. Every moment with you is a gift.</p>
+                <p>I hope this little website brings a smile to your face, just like you bring one to mine every day.</p>
+                <p class="signature">With all my love,<br> [Your Name]</p>
+                </div>
+        </section>
+
+        <footer>
+            <p>Made with love, exclusively for Juzen. ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
